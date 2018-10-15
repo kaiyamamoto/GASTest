@@ -47,17 +47,28 @@ public class ScenarioWriter : EditorWindow
 		}
 		Debug.Log(download.text);
 
+		string path = "Scenarios/" + _sheetName;
+		string fullPath = "Assets/Resources/" + path + ".asset";
 		var json = (List<object>)Json.Deserialize(download.text);
-		if (json != null)
+
+		if (json == null)
 		{
-			var scenario = CreateScriptableObject<Scenario>("Assets/Scenarios/" + _sheetName + ".asset");
-			scenario.hideFlags = HideFlags.NotEditable;
-			scenario.texts = json.Select(j => j.ToString()).ToArray();
-			Debug.Log("complete.");
+			Debug.LogError(download.text);
 		}
 		else
 		{
-			Debug.LogError(download.text);
+			// ファイルを取得
+			Scenario scenario = null;
+			scenario = Resources.Load<Scenario>(path);
+
+			if (!scenario)
+			{
+				// 存在しない場合作成
+				scenario = CreateScriptableObject<Scenario>(fullPath);
+			}
+			scenario.hideFlags = HideFlags.NotEditable;
+			scenario.texts = json.Select(j => j.ToString()).ToArray();
+			Debug.Log("complete.");
 		}
 		_message = "";
 	}
