@@ -11,4 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad2a6dbcf5b7664689e6f02422ad3b0, type: 3}
   m_Name: Sheet1
   m_EditorClassIdentifier: 
+  charas: []
   texts: []

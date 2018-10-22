@@ -51,6 +51,8 @@ public class ScenarioWriter : EditorWindow
 		string fullPath = "Assets/Resources/" + path + ".asset";
 		var json = (List<object>)Json.Deserialize(download.text);
 
+		Debug.Log(json);
+
 		if (json == null)
 		{
 			Debug.LogError(download.text);
@@ -66,8 +68,21 @@ public class ScenarioWriter : EditorWindow
 				// 存在しない場合作成
 				scenario = CreateScriptableObject<Scenario>(fullPath);
 			}
-			scenario.hideFlags = HideFlags.NotEditable;
-			scenario.texts = json.Select(j => j.ToString()).ToArray();
+			else
+			{
+				scenario.ReSet();
+			}
+
+			foreach (var data in json)
+			{
+				var dic = data as Dictionary<string, object>;
+				scenario.charas.Add(dic["character"] as string);
+				scenario.texts.Add(dic["contents"] as string);
+			}
+
+			// ScriptableObjectのEditor編集を無効
+			//scenario.hideFlags = HideFlags.NotEditable;
+			// テキスト設定
 			Debug.Log("complete.");
 		}
 		_message = "";
