@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: FutabaFace
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a23770c5e446c334c9a33efaa1738e86, type: 3}
+    - {fileID: 102900000, guid: d9ec86afad9d89f4fbfb19bb47a1572a, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 6e2ed6282389f4b48ab78c8f1d2a8c12, type: 3}
+  - {fileID: 21300000, guid: 39ec489257c2c7d4c915eda78ba9d0f5, type: 3}
+  - {fileID: 21300000, guid: c17cff244d075fd42bf097908f8066fd, type: 3}
+  - {fileID: 21300000, guid: 90b4bafa36b55df40bc36fce42c597ac, type: 3}
+  - {fileID: 21300000, guid: 5b9538652bcd7414c9851617f3c455b6, type: 3}
+  - {fileID: 21300000, guid: 41773df227db99647b2fc48c6841df80, type: 3}
+  - {fileID: 21300000, guid: 8f69d4c242e9d19408081527d27a326a, type: 3}
+  - {fileID: 21300000, guid: 932c26a0d5df87340955ed4d35f3310c, type: 3}
+  - {fileID: 21300000, guid: 1a4b965c1abe33b4186700337a24c76e, type: 3}
+  - {fileID: 21300000, guid: 7769e560d8da74b46b6265a963c446d0, type: 3}
+  - {fileID: 21300000, guid: dac60a4906a5a614b8b89979502f3569, type: 3}
+  - {fileID: 21300000, guid: 338208d0421f41f4fbe151654a7f9a90, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - b008_001_03
+  - b008_000_03
+  - b008_000_03_e1
+  - b008_000_03_e2
+  - b008_001_03_e1
+  - b008_001_03_e2
+  - b008_000_03_m1
+  - b008_000_03_m2
+  - b008_000_03_m3
+  - b008_001_03_m1
+  - b008_001_03_m3
+  - b008_001_03_m2
+  m_Tag: FutabaFace
+  m_IsVariant: 0
